@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="feedbutton">200dp</dimen>
+    <dimen name="widthtex">300dp</dimen>
+    <dimen name="heightext">40dp</dimen>
+    <dimen name="imageFeed">240dp</dimen>
+    <dimen name="texto">18sp</dimen>
+</resources>
