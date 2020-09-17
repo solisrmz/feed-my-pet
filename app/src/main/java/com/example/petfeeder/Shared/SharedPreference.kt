@@ -19,5 +19,8 @@ class SharedPreference(val context: Context) {
             return false
         }
     }
+    fun getString(KEY_NAME: String):String? {
+        return sharedPref.getString(KEY_NAME, null)
+    }
 }
 
