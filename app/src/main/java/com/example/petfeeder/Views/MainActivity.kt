@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var estado: TextView
     private lateinit var feedme: Button
     private lateinit var servo: String
+    private lateinit var name: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         animationView.playAnimation()
         animationView.loop(true)
         databaseReference.child("servo").setValue("on")
-        estado.setText("¡Gracias humano por alimentarme!")
+        estado.setText("")
     }
 
     fun initialize(){
@@ -43,12 +44,13 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 servo = dataSnapshot.child("servo").value.toString()
                 if(servo == "off"){
-                    estado.setText(" ")
+                    estado.setText("¡Gracias humano por alimentarme!")
                     animationView.setAnimation(R.raw.catload)
                     animationView.playAnimation()
                     animationView.loop(true)
                 }else{
-
+                    name = dataSnapshot.child("nombre").value.toString()
+                    estado.setText("¡Alimentando a "+name+"!")
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {

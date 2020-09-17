@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.5"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="@dimen/progress"
+            android:layout_height="@dimen/progress"
+            android:layout_centerInParent="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/steps"
+            app:lottie_autoPlay="true"/>
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="match_parent"
+            android:text="Guardando"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:fontFamily="@font/bs"
+            android:layout_height="55dp"
+            android:textColor="#ffff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="246dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

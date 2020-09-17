@@ -6,4 +6,5 @@
     <dimen name="imageFeed">240dp</dimen>
     <dimen name="texto">18sp</dimen>
     <dimen name="texto_dos">26sp</dimen>
+    <dimen name="progress">100dp</dimen>
 </resources>
