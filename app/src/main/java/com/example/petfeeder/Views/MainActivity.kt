@@ -1,14 +1,12 @@
-package com.example.petfeeder
+package com.example.petfeeder.Views
 
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.airbnb.lottie.LottieAnimationView
+import com.example.petfeeder.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
