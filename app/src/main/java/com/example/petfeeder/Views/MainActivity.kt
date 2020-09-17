@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.petfeeder.R
 import com.example.petfeeder.Shared.SharedPreference
 import com.google.firebase.database.*
@@ -20,37 +21,46 @@ class MainActivity : AppCompatActivity() {
     private lateinit var feedme: Button
     private lateinit var servo: String
     private lateinit var name: String
+    private lateinit var mProgressView: View
+    private lateinit var button : Button
+    private lateinit var sharedPreference: SharedPreference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val sharedPreference: SharedPreference = SharedPreference(this)
+        sharedPreference = SharedPreference(this)
         val model = sharedPreference.getString("servo").toString()
         databaseReference = FirebaseDatabase.getInstance().getReference(model)
         initialize()
+        loop()
     }
 
     fun feed(v: View){
-        animationView.setAnimation(R.raw.dogeat)
-        animationView.playAnimation()
-        animationView.loop(true)
         databaseReference.child("servo").setValue("on")
         estado.setText("")
     }
 
     fun initialize(){
+        mProgressView = findViewById(R.id.progress);
+        mProgressView.setVisibility(View.GONE);
         feedme = findViewById(R.id.feedme)
         estado = findViewById(R.id.estado)
+        button = findViewById(R.id.feedme)
+    }
+
+    fun loop(){
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 servo = dataSnapshot.child("servo").value.toString()
                 if(servo == "off"){
-                    estado.setText("¡Gracias humano por alimentarme!")
-                    animationView.setAnimation(R.raw.catload)
-                    animationView.playAnimation()
-                    animationView.loop(true)
+                    getPet()
+                    feedme.setVisibility(View.VISIBLE);
+                    mProgressView.setVisibility(View.GONE)
                 }else{
+                    getPet()
+                    feedme.setVisibility(View.GONE)
+                    mProgressView.setVisibility(View.VISIBLE);
                     name = dataSnapshot.child("nombre").value.toString()
-                    estado.setText("¡Alimentando a "+name+"!")
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {
@@ -62,6 +72,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return true
+    }
+
+    fun getPet(){
+        val petType = sharedPreference.getString("pet").toString()
+        if (petType == "Gato" || petType == "gato"){
+            animationView.setAnimation(R.raw.circlecat)
+            animationView.playAnimation()
+            animationView.loop(true)
+            estado.setText("¡Hola humano!")
+        }
+        if (petType == "Perro" || petType == "perro"){
+            animationView.setAnimation(R.raw.circledog)
+            animationView.playAnimation()
+            animationView.loop(true)
+            estado.setText("¡Hola humano!")
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

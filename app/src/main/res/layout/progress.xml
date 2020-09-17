@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@android:color/black"
+        android:background="@color/colorback"
         android:alpha="0.5"
         android:layout_height="match_parent">
 
@@ -27,7 +27,7 @@
             android:textSize="26sp"
             android:fontFamily="@font/bs"
             android:layout_height="55dp"
-            android:textColor="#ffff"
+            android:textColor="@color/text"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="246dp" />
     </RelativeLayout>
