@@ -16,6 +16,7 @@
         android:fontFamily="@font/bs"
         android:inputType="textPersonName"
         android:hint="Número de serie"
+        android:textSize="@dimen/texto"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintHorizontal_bias="0.495"
@@ -79,6 +80,7 @@
         android:layout_width="@dimen/widthtex"
         android:layout_height="@dimen/heightext"
         android:ems="10"
+        android:textSize="@dimen/texto"
         android:fontFamily="@font/bs"
         android:inputType="textPersonName"
         android:hint="Nombre de tu mascota"
@@ -103,10 +105,24 @@
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9056088" />
+
+    <EditText
+        android:id="@+id/pets"
+        android:hint="Tipo de mascota"
+        android:fontFamily="@font/bs"
+        android:textSize="@dimen/texto"
+        android:layout_width="@dimen/widthtex"
+        android:layout_height="@dimen/heightext"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline15" />
 </androidx.constraintlayout.widget.ConstraintLayout>

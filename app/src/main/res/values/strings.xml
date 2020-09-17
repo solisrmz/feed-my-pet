@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Feed my pet</string>
+
+    <string name="spintitle">Mi mascota es: </string>
+    <string-array name="mascotas">
+        <item>Perro</item>
+        <item>Gato</item>
+    </string-array>
 </resources>

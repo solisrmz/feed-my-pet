@@ -9,7 +9,7 @@ import com.example.petfeeder.R
 import com.example.petfeeder.Shared.SharedPreference
 
 class Splash : AppCompatActivity() {
-    private val SPLASH_TIME_OUT:Long = 1000
+    private val SPLASH_TIME_OUT:Long = 2000
     override fun onCreate(savedInstanceState: Bundle?) {
         val sharedPreference: SharedPreference =SharedPreference(this)
         super.onCreate(savedInstanceState)
