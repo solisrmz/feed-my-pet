@@ -2,6 +2,7 @@ package com.example.petfeeder.Views
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,7 @@ class Register : AppCompatActivity() {
     private lateinit var serial : EditText
     private lateinit var name : EditText
     private lateinit var mProgressView: View
+    private val SPLASH_TIME_OUT:Long = 4000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register)
@@ -30,6 +32,7 @@ class Register : AppCompatActivity() {
 
     fun save(){
         mProgressView.setVisibility(View.VISIBLE);
+        Handler().postDelayed({
         val sharedPreference: SharedPreference = SharedPreference(this)
         val numserie = serial.editableText.toString()
         sharedPreference.save("servo", numserie)
@@ -45,6 +48,7 @@ class Register : AppCompatActivity() {
             .addOnFailureListener {
                 mProgressView.setVisibility(View.GONE);
             }
+        }, SPLASH_TIME_OUT)
     }
     fun click(v: View){
         save()
