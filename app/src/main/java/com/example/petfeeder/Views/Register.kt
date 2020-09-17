@@ -1,15 +1,14 @@
-package com.example.petfeeder
+package com.example.petfeeder.Views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import com.example.petfeeder.R
 import com.example.petfeeder.Shared.SharedPreference
-import com.example.petfeeder.Views.MainActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.register.*
 
 class Register : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
@@ -21,6 +20,7 @@ class Register : AppCompatActivity() {
         setContentView(R.layout.register)
         initialize()
     }
+
     fun initialize(){
         serial =  findViewById(R.id.serial)
         ssid = findViewById(R.id.ssid)

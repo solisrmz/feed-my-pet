@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import com.example.petfeeder.R
-import com.example.petfeeder.Register
 import com.example.petfeeder.Shared.SharedPreference
 
 class Splash : AppCompatActivity() {
