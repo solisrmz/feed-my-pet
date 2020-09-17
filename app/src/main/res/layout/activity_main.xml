@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.MainActivity"
-    android:background="@color/colorback">
+    android:background="@drawable/background">
+
     <TextView
         android:id="@+id/estado"
         android:layout_width="@dimen/widthtex"

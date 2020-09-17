@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.Register"
-    android:background="@color/colorback">
+    android:background="@drawable/background">
 
     <EditText
         android:id="@+id/serial"
@@ -87,7 +87,11 @@
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
-    <include layout="@layout/progress" android:id="@+id/progress_login"/>
+    <include
+        android:id="@+id/progress_login"
+        layout="@layout/progress"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/save"

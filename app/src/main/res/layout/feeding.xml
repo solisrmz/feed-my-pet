@@ -13,4 +13,15 @@
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/food"
         app:lottie_loop="true"/>
+
+    <TextView
+        android:layout_width="@dimen/widthtex"
+        android:layout_height="@dimen/heightext"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Alimentando..."
+        android:textSize="@dimen/texto"
+        android:fontFamily="@font/bs"
+        android:textAlignment="center"
+         />
 </RelativeLayout>

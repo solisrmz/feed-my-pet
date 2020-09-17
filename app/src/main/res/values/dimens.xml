@@ -7,4 +7,8 @@
     <dimen name="texto">18sp</dimen>
     <dimen name="texto_dos">26sp</dimen>
     <dimen name="progress">100dp</dimen>
+    <dimen name="splash_image">150dp</dimen>
+    <dimen name="reg_image">120dp</dimen>
+    <dimen name="padding_logo">40dp</dimen>
+    <dimen name="padding_bot">500dp</dimen>
 </resources>
