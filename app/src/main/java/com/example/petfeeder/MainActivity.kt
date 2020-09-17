@@ -12,7 +12,6 @@ import com.airbnb.lottie.LottieAnimationView
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
     private lateinit var estado: TextView
@@ -26,23 +25,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun feed(v: View){
+        animationView.setAnimation(R.raw.dogeat)
         animationView.playAnimation()
         animationView.loop(true)
         databaseReference.child("servo").setValue("on")
+        estado.setText("¡Gracias humano por alimentarme!")
     }
 
     fun initialize(){
         feedme = findViewById(R.id.feedme)
         estado = findViewById(R.id.estado)
-        animationView.setAnimation(R.raw.cat)
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val valHumedad : String = dataSnapshot.child("humedad").value.toString()
                 servo = dataSnapshot.child("servo").value.toString()
-                if(servo == "on"){
-                    estado.setText("¡Gracias humano por alimentarme!")
+                if(servo == "off"){
+                    estado.setText(" ")
+                    animationView.setAnimation(R.raw.catload)
+                    animationView.playAnimation()
+                    animationView.loop(true)
                 }else{
-                    animationView.cancelAnimation()
+
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {

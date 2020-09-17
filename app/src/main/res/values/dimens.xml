@@ -5,4 +5,5 @@
     <dimen name="heightext">40dp</dimen>
     <dimen name="imageFeed">240dp</dimen>
     <dimen name="texto">18sp</dimen>
+    <dimen name="texto_dos">26sp</dimen>
 </resources>
