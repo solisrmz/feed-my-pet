@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:text="Alimentando..."
         android:textSize="@dimen/texto"
-        android:fontFamily="@font/bs"
+        android:fontFamily="@font/grandbold"
         android:textAlignment="center"
          />
 </RelativeLayout>

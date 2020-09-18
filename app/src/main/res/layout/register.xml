@@ -7,15 +7,27 @@
     tools:context=".Views.Register"
     android:background="@drawable/background">
 
+    <ImageView
+        android:layout_width="@dimen/reg_image"
+        android:layout_height="@dimen/reg_image"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="0.737"
+        android:background="@drawable/logo"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
     <EditText
         android:id="@+id/serial"
         android:layout_width="@dimen/widthtex"
         android:layout_height="@dimen/heightext"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:fontFamily="@font/bs"
+        android:fontFamily="@font/grandbold"
         android:inputType="textPersonName"
         android:hint="Número de serie"
+        android:textColor="@color/text"
         android:textSize="@dimen/texto"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
@@ -79,7 +91,8 @@
         android:layout_height="@dimen/heightext"
         android:ems="10"
         android:textSize="@dimen/texto"
-        android:fontFamily="@font/bs"
+        android:fontFamily="@font/grandbold"
+        android:textColor="@color/text"
         android:inputType="textPersonName"
         android:hint="Nombre de tu mascota"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
@@ -87,11 +100,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
-    <include
-        android:id="@+id/progress_login"
-        layout="@layout/progress"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/save"
@@ -99,7 +107,7 @@
         android:layout_height="@dimen/heightext"
         android:text="Guardar"
         android:textColor="#FFFF"
-        android:fontFamily="@font/bs"
+        android:fontFamily="@font/grandbold"
         android:textSize="@dimen/texto"
         android:onClick="click"
         android:background="@color/colorPrimary"
@@ -119,8 +127,9 @@
     <EditText
         android:id="@+id/pets"
         android:hint="Tipo de mascota"
-        android:fontFamily="@font/bs"
+        android:fontFamily="@font/grandbold"
         android:textSize="@dimen/texto"
+        android:textColor="@color/text"
         android:layout_width="@dimen/widthtex"
         android:layout_height="@dimen/heightext"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
@@ -128,4 +137,10 @@
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
+
+    <include
+        android:id="@+id/progress_login"
+        layout="@layout/progress"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
