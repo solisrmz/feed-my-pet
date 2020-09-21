@@ -112,7 +112,7 @@
         android:layout_width="@dimen/widthtex"
         android:layout_height="@dimen/heightext"
         android:fontFamily="@font/grandbold"
-        android:text="Presiona el botón"
+        android:text="@string/feed"
         android:textAlignment="center"
         android:textSize="@dimen/texto_dos"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -122,9 +122,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="0.44" />
 
-    <include
-        layout="@layout/feeding"
-        android:id="@+id/progress"/>
-
+    <include layout="@layout/feeding" android:id="@+id/progress"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

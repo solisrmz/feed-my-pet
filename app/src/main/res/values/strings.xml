@@ -15,4 +15,5 @@
     <string name="guardar">Continuar</string>
     <string name="guardando">Guardando</string>
     <string name="editar">Mis datos</string>
+    <string name="feed">Presiona el botón</string>
 </resources>
