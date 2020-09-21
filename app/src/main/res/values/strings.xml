@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">Feed my pet</string>
 
-    <string name="spintitle">Mi mascota es: </string>
-    <string-array name="mascotas">
-        <item>Perro</item>
-        <item>Gato</item>
-    </string-array>
+    //Menu
+    <string name="config">Configuración</string>
+    <string name="acercade">Acerca de</string>
+
     <string name="bienvenida">¡Hola humano!</string>
     <string name="alimentando">¡Alimentando!</string>
     //formulario

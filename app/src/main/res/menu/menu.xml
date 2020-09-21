@@ -3,9 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/configuration"
-        android:title="Configuración"
+        android:title="@string/config"
+        android:fontFamily="@font/grandbold"
         />
     <item
         android:id="@+id/info"
-        android:title="Acerca de"/>
+        android:title="@string/acercade"
+        android:fontFamily="@font/grandbold"/>
 </menu>

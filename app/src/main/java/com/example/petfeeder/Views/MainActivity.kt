@@ -17,8 +17,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
-    private lateinit var estado: TextView
-    private lateinit var feedme: Button
+    private lateinit var status: TextView
+    private lateinit var feed: Button
     private lateinit var servo: String
     private lateinit var name: String
     private lateinit var mProgressView: View
@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
     fun initialize(){
         mProgressView = findViewById(R.id.progress);
         mProgressView.setVisibility(View.GONE);
-        feedme = findViewById(R.id.feedme)
-        estado = findViewById(R.id.estado)
+        feed = findViewById(R.id.feedme)
+        status = findViewById(R.id.estado)
         button = findViewById(R.id.feedme)
     }
 
@@ -53,11 +53,11 @@ class MainActivity : AppCompatActivity() {
                 servo = dataSnapshot.child("servo").value.toString()
                 if(servo == "off"){
                     getPet()
-                    feedme.setVisibility(View.VISIBLE);
+                    feed.setVisibility(View.VISIBLE);
                     mProgressView.setVisibility(View.GONE)
                 }else{
                     getPet()
-                    feedme.setVisibility(View.GONE)
+                    feed.setVisibility(View.GONE)
                     mProgressView.setVisibility(View.VISIBLE);
                 }
             }
@@ -78,13 +78,13 @@ class MainActivity : AppCompatActivity() {
             animationView.setAnimation(R.raw.circlecat)
             animationView.playAnimation()
             animationView.loop(true)
-            estado.setText(R.string.bienvenida)
+            status.setText(R.string.bienvenida)
         }
         if (petType == "Perro" || petType == "perro"){
             animationView.setAnimation(R.raw.circledog)
             animationView.playAnimation()
             animationView.loop(true)
-            estado.setText(R.string.bienvenida)
+            status.setText(R.string.bienvenida)
         }
     }
 

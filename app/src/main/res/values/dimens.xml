@@ -5,10 +5,15 @@
     <dimen name="heightext">40dp</dimen>
     <dimen name="imageFeed">240dp</dimen>
     <dimen name="texto">18sp</dimen>
+
     <dimen name="texto_dos">26sp</dimen>
     <dimen name="progress">100dp</dimen>
-    <dimen name="splash_image">150dp</dimen>
+
+    <dimen name="splash_image">120dp</dimen>
     <dimen name="reg_image">120dp</dimen>
     <dimen name="padding_logo">40dp</dimen>
     <dimen name="padding_bot">500dp</dimen>
+
+    <dimen name="margin_load">210dp</dimen>
+    <dimen name="text_load">28sp</dimen>
 </resources>
