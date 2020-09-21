@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/prog"
+        android:background="@color/bg"
         android:alpha="0.5"
         android:layout_height="match_parent">
 
@@ -22,7 +22,7 @@
         <TextView
             android:id="@+id/texto"
             android:layout_width="match_parent"
-            android:text="Guardando"
+            android:text="@string/guardando"
             android:textAlignment="center"
             android:textSize="26sp"
             android:fontFamily="@font/grandbold"

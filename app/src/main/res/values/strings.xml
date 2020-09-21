@@ -6,4 +6,12 @@
         <item>Perro</item>
         <item>Gato</item>
     </string-array>
+    <string name="bienvenida">¡Hola humano!</string>
+    <string name="alimentando">¡Alimentando!</string>
+    //formulario
+    <string name="modelo">Ingresa el número de serie</string>
+    <string name="mascota">Nombre de tu mascota</string>
+    <string name="tipo">Perro o gato</string>
+    <string name="guardar">Continuar</string>
+    <string name="guardando">Guardando</string>
 </resources>

@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
 
     fun feed(v: View){
         databaseReference.child("servo").setValue("on")
-        estado.setText("")
     }
 
     fun initialize(){
@@ -60,7 +59,6 @@ class MainActivity : AppCompatActivity() {
                     getPet()
                     feedme.setVisibility(View.GONE)
                     mProgressView.setVisibility(View.VISIBLE);
-                    name = dataSnapshot.child("nombre").value.toString()
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {
@@ -80,13 +78,13 @@ class MainActivity : AppCompatActivity() {
             animationView.setAnimation(R.raw.circlecat)
             animationView.playAnimation()
             animationView.loop(true)
-            estado.setText("¡Hola humano!")
+            estado.setText(R.string.bienvenida)
         }
         if (petType == "Perro" || petType == "perro"){
             animationView.setAnimation(R.raw.circledog)
             animationView.playAnimation()
             animationView.loop(true)
-            estado.setText("¡Hola humano!")
+            estado.setText(R.string.bienvenida)
         }
     }
 

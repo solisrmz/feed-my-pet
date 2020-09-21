@@ -26,7 +26,7 @@
         android:ems="10"
         android:fontFamily="@font/grandbold"
         android:inputType="textPersonName"
-        android:hint="Número de serie"
+        android:hint="@string/modelo"
         android:textColor="@color/text"
         android:textSize="@dimen/texto"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
@@ -94,23 +94,22 @@
         android:fontFamily="@font/grandbold"
         android:textColor="@color/text"
         android:inputType="textPersonName"
-        android:hint="Nombre de tu mascota"
+        android:hint="@string/mascota"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
-
     <Button
         android:id="@+id/save"
         android:layout_width="@dimen/widthtex"
         android:layout_height="@dimen/heightext"
-        android:text="Guardar"
-        android:textColor="#FFFF"
+        android:text="@string/guardar"
+        android:textColor="@color/bg"
         android:fontFamily="@font/grandbold"
         android:textSize="@dimen/texto"
         android:onClick="click"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/submitbutton"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
@@ -126,7 +125,7 @@
 
     <EditText
         android:id="@+id/pets"
-        android:hint="Tipo de mascota"
+        android:hint="@string/tipo"
         android:fontFamily="@font/grandbold"
         android:textSize="@dimen/texto"
         android:textColor="@color/text"

@@ -19,8 +19,9 @@
         android:layout_height="@dimen/heightext"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Alimentando..."
+        android:text="@string/alimentando"
         android:textSize="@dimen/texto"
+        android:textColor="@color/text"
         android:fontFamily="@font/grandbold"
         android:textAlignment="center"
          />
