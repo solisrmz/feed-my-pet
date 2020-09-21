@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.Register"
-            android:theme="@style/Splash" android:label="Registro"
-            android:parentActivityName=".Views.MainActivity">
+        <activity android:name=".Views.EditData">
+        </activity>
+        <activity
+            android:name=".Views.Register"
+            android:label="Registro"
+            android:theme="@style/Splash">
         </activity>
         <activity
             android:name=".Views.Splash"
@@ -21,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.MainActivity"></activity>
+        <activity android:name=".Views.MainActivity" />
     </application>
 
 </manifest>

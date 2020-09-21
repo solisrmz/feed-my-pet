@@ -91,8 +91,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item?.itemId){
             R.id.configuration-> {
-                startActivity(Intent(this, Register::class.java))
-                finish()
+                startActivity(Intent(this, EditData::class.java))
             }
         }
         return super.onOptionsItemSelected(item)
